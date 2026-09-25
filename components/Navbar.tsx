@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { assetPath } from "@/lib/site";
+import { whatsappUrl } from "@/lib/contact";
 import { WhatsAppIcon } from "./icons";
 
 const links = [
@@ -40,7 +41,7 @@ export function Navbar() {
         <div className="nav-links">
           {links.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
         </div>
-        <a className="nav-cta" href="https://wa.me/5561991370893" target="_blank" rel="noreferrer">
+        <a className="nav-cta" href={whatsappUrl()} target="_blank" rel="noreferrer">
           <WhatsAppIcon /> <span>Falar no WhatsApp</span>
         </a>
         <button className="menu-toggle" onClick={() => setOpen(!open)} aria-expanded={open} aria-label={open ? "Fechar menu" : "Abrir menu"}>
@@ -58,7 +59,7 @@ export function Navbar() {
                 <span>0{index + 1}</span>{label}
               </motion.a>
             ))}
-            <a className="button button-orange mobile-wa" href="https://wa.me/5561991370893" target="_blank" rel="noreferrer">
+            <a className="button button-orange mobile-wa" href={whatsappUrl()} target="_blank" rel="noreferrer">
               <WhatsAppIcon /> Falar no WhatsApp
             </a>
           </motion.div>

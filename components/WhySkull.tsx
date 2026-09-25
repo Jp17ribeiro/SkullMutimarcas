@@ -1,11 +1,22 @@
-import { Gem, MapPin, MessageCircle, Sparkles } from "lucide-react";
+import Image from "next/image";
+import { MapPin, MessageCircle, Sparkles, type LucideIcon } from "lucide-react";
+import { assetPath } from "@/lib/site";
 import { Reveal } from "./Reveal";
 
-const items = [
-  { n: "01", title: "Marcas selecionadas", text: "Streetwear escolhido para quem procura estilo e personalidade.", icon: Gem },
-  { n: "02", title: "Estilo autêntico", text: "Peças que acompanham a cultura urbana e as tendências das ruas.", icon: Sparkles },
+type WhyItem = {
+  n: string;
+  title: string;
+  text: string;
+  icon?: LucideIcon;
+  image?: string;
+  imagePosition?: string;
+};
+
+const items: WhyItem[] = [
+  { n: "01", title: "Marcas selecionadas", text: "Streetwear escolhido para quem procura estilo e personalidade.", image: assetPath("/images/juncao-marcas-skull.png") },
+  { n: "02", title: "Estilo autêntico", text: "Peças que acompanham a cultura urbana e as tendências das ruas.", icon: Sparkles, image: assetPath("/images/foto-vitrine-skull.png"), imagePosition: "center 42%" },
   { n: "03", title: "Atendimento direto", text: "Fale com nossa equipe rapidamente pelo WhatsApp.", icon: MessageCircle },
-  { n: "04", title: "Loja física", text: "Experimente, conheça as peças e encontre seu próximo estilo.", icon: MapPin },
+  { n: "04", title: "Loja física", text: "Experimente, conheça as peças e encontre seu próximo estilo.", icon: MapPin, image: assetPath("/images/foto-loja-skull.png"), imagePosition: "center 58%" },
 ];
 
 export function WhySkull() {
@@ -20,8 +31,9 @@ export function WhySkull() {
           {items.map((item, index) => {
             const Icon = item.icon;
             return (
-              <Reveal key={item.n} className="why-card interactive" delay={index * 0.07}>
-                <div className="why-top"><span>{item.n}</span><Icon /></div>
+              <Reveal key={item.n} className={`why-card interactive ${item.image ? "why-card-image" : ""}`} delay={index * 0.07}>
+                {item.image && <Image className="why-card-media" src={item.image} alt={item.n === "01" ? "Composição das marcas Compton, Cool Cat, Trip Side, Chronic e Hocks" : item.n === "02" ? "Modelo vestindo camiseta Trip Side" : "Interior da loja Skull Multimarcas"} fill sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw" style={{ objectPosition: item.imagePosition }} />}
+                <div className="why-top"><span>{item.n}</span>{Icon && <Icon />}</div>
                 <div><h3>{item.title}</h3><p>{item.text}</p></div>
               </Reveal>
             );

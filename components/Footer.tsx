@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowUp } from "lucide-react";
 import { assetPath } from "@/lib/site";
+import { WHATSAPP_DISPLAY, whatsappUrl } from "@/lib/contact";
 import { InstagramIcon, WhatsAppIcon } from "./icons";
 
 const nav = [
@@ -17,7 +18,7 @@ export function Footer() {
           <p>Streetwear <i /> Sneakers <i /> Lifestyle</p>
         </div>
         <div className="footer-col"><span>Navegue</span>{nav.map(([label, href]) => <a href={href} key={href}>{label}</a>)}</div>
-        <div className="footer-col"><span>Conecte</span><a href="https://www.instagram.com/skullmultimarcas_/" target="_blank" rel="noreferrer"><InstagramIcon /> @skullmultimarcas_</a><a href="https://wa.me/5561991370893" target="_blank" rel="noreferrer"><WhatsAppIcon /> (61) 99137-0893</a></div>
+        <div className="footer-col"><span>Conecte</span><a href="https://www.instagram.com/skullmultimarcas_/" target="_blank" rel="noreferrer"><InstagramIcon /> @skullmultimarcas_</a><a href={whatsappUrl()} target="_blank" rel="noreferrer"><WhatsAppIcon /> {WHATSAPP_DISPLAY}</a></div>
         <a href="#inicio" className="back-top" aria-label="Voltar ao início"><ArrowUp /></a>
       </div>
       <div className="container footer-bottom"><p>© 2026 Skull Multimarcas. Todos os direitos reservados.</p></div>

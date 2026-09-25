@@ -1,23 +1,26 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-
-const words = ["Não", "é", "só", "roupa.", "É", "identidade."];
+import { assetPath } from "@/lib/site";
 
 export function Manifesto() {
   return (
-    <section className="manifesto section" id="sobre">
-      <div className="manifesto-orbit" aria-hidden="true" />
+    <section className="manifesto manifesto-cinematic section" id="sobre">
+      <motion.div className="manifesto-media" initial={{ scale: 1.08 }} whileInView={{ scale: 1 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }} aria-hidden="true">
+        <Image src={assetPath("/images/foto-vitrine-skull.png")} alt="" fill sizes="100vw" />
+      </motion.div>
+      <div className="manifesto-shade" aria-hidden="true" />
       <div className="container manifesto-inner">
-        <span className="eyebrow"><i /> Manifesto Skull</span>
-        <motion.h2 initial="hidden" whileInView="show" viewport={{ once: true, margin: "-15%" }} variants={{ show: { transition: { staggerChildren: 0.1 } } }}>
-          {words.map((word, index) => (
-            <motion.span key={`${word}-${index}`} variants={{ hidden: { opacity: 0, y: 55, rotate: 2 }, show: { opacity: 1, y: 0, rotate: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } } }} className={index > 3 ? "accent" : ""}>{word}&nbsp;</motion.span>
-          ))}
+        <span className="eyebrow light"><i /> 04 / Manifesto Skull</span>
+        <motion.h2 initial="hidden" whileInView="show" viewport={{ once: true, margin: "-12%" }} variants={{ show: { transition: { staggerChildren: 0.13 } } }}>
+          <motion.span variants={{ hidden: { opacity: 0, y: 70 }, show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] } } }}>Não é só</motion.span>
+          <motion.span variants={{ hidden: { opacity: 0, y: 70 }, show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] } } }}>Roupa.</motion.span>
+          <motion.span variants={{ hidden: { opacity: 0, y: 70 }, show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] } } }}>É <em>identidade.</em></motion.span>
         </motion.h2>
         <motion.div className="manifesto-bottom" initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }}>
-          <span className="manifesto-mark">S / 26</span>
-          <p>A Skull Multimarcas reúne peças para quem entende que estilo também é uma forma de expressão.</p>
+          <span className="manifesto-line" aria-hidden="true" />
+          <p>Streetwear é mais do que vestir.<br />É mostrar quem você é.</p>
         </motion.div>
       </div>
     </section>

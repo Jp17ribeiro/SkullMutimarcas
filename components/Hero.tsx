@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { useRef } from "react";
 import { assetPath } from "@/lib/site";
+import { whatsappUrl } from "@/lib/contact";
 import { WhatsAppIcon } from "./icons";
 
 export function Hero() {
@@ -30,7 +31,7 @@ export function Hero() {
           <p className="hero-sub">Streetwear, sneakers e atitude em um só lugar.</p>
           <div className="hero-actions">
             <a href="#colecoes" className="button button-orange">Ver coleções <ArrowDown /></a>
-            <a href="https://wa.me/5561991370893" target="_blank" rel="noreferrer" className="button button-glass"><WhatsAppIcon /> Falar no WhatsApp <ArrowUpRight /></a>
+            <a href={whatsappUrl()} target="_blank" rel="noreferrer" className="button button-glass"><WhatsAppIcon /> Falar no WhatsApp <ArrowUpRight /></a>
           </div>
         </motion.div>
         <a href="#marcas" className="scroll-cue" aria-label="Rolar para marcas">
