@@ -4,3 +4,8 @@ out
 .DS_Store
 *.log
 .env*.local
+*.tsbuildinfo
+
+# Logos antigas mantidas apenas localmente; o site usa os arquivos `logo-skull-nova-*`.
+/public/images/logo-skull-4k.png
+/public/images/logo-skull-transparente.png
