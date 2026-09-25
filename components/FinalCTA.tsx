@@ -1,11 +1,12 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/site";
 import { WhatsAppIcon } from "./icons";
 import { Reveal } from "./Reveal";
 
 export function FinalCTA() {
   return (
     <section className="final-cta section">
-      <div className="final-cta-bg" aria-hidden="true"><Image src="/images/grafite-skull.png" alt="" fill sizes="100vw" /></div>
+      <div className="final-cta-bg" aria-hidden="true"><Image src={assetPath("/images/grafite-skull.png")} alt="" fill sizes="100vw" /></div>
       <div className="final-overlay" />
       <div className="container final-content">
         <Reveal><span className="eyebrow light"><i /> O próximo passo é seu</span></Reveal>

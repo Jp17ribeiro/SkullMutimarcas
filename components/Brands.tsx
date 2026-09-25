@@ -1,12 +1,13 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/site";
 import { Reveal } from "./Reveal";
 
 const brands = [
-  { name: "Hocks", src: "/images/logo-hocks.png" },
-  { name: "Trip Side", src: "/images/logo-trip-side.jpg" },
-  { name: "Chronic", src: "/images/logo-chronic.png" },
-  { name: "Cool Cat", src: "/images/logo-cool-cat.jpg" },
-  { name: "Compton", src: "/images/logo-compton.png" },
+  { name: "Hocks", src: assetPath("/images/logo-hocks.png") },
+  { name: "Trip Side", src: assetPath("/images/logo-trip-side.jpg") },
+  { name: "Chronic", src: assetPath("/images/logo-chronic.png") },
+  { name: "Cool Cat", src: assetPath("/images/logo-cool-cat.jpg") },
+  { name: "Compton", src: assetPath("/images/logo-compton.png") },
 ];
 
 export function Brands() {

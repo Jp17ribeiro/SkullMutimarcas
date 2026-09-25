@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import { assetPath } from "@/lib/site";
 import { WhatsAppIcon } from "./icons";
 
 const links = [
@@ -34,7 +35,7 @@ export function Navbar() {
     <header className={`nav-shell ${scrolled ? "is-scrolled" : ""}`}>
       <nav className="floating-nav" aria-label="Navegação principal">
         <a href="#inicio" className="nav-logo" aria-label="Skull Multimarcas — início">
-          <Image src="/images/logo-skull-nova-transparente.png" alt="" width={1254} height={1254} priority />
+          <Image src={assetPath("/images/logo-skull-nova-transparente.png")} alt="" width={1254} height={1254} priority />
         </a>
         <div className="nav-links">
           {links.map(([label, href]) => <a key={href} href={href}>{label}</a>)}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowUp } from "lucide-react";
+import { assetPath } from "@/lib/site";
 import { InstagramIcon, WhatsAppIcon } from "./icons";
 
 const nav = [
@@ -12,7 +13,7 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer-top">
         <div className="footer-brand">
-          <Image src="/images/logo-skull-nova-transparente.png" alt="Skull Multimarcas" width={1254} height={1254} />
+          <Image src={assetPath("/images/logo-skull-nova-transparente.png")} alt="Skull Multimarcas" width={1254} height={1254} />
           <p>Streetwear <i /> Sneakers <i /> Lifestyle</p>
         </div>
         <div className="footer-col"><span>Navegue</span>{nav.map(([label, href]) => <a href={href} key={href}>{label}</a>)}</div>

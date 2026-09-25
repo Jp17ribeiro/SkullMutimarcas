@@ -1,22 +1,26 @@
 import type { Metadata, Viewport } from "next";
+import { assetPath } from "@/lib/site";
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const normalizedSiteUrl = siteUrl.endsWith("/") ? siteUrl : `${siteUrl}/`;
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(normalizedSiteUrl),
   title: "Skull Multimarcas | Streetwear, Tênis e Moda Urbana",
   description:
     "Conheça a Skull Multimarcas. Streetwear, tênis e marcas que representam atitude, identidade e cultura urbana.",
-  alternates: { canonical: "/" },
+  alternates: { canonical: normalizedSiteUrl },
   openGraph: {
     title: "Skull Multimarcas | Seu brilho, seu estilo.",
     description: "Streetwear, sneakers e atitude em um só lugar.",
-    url: "/",
+    url: normalizedSiteUrl,
     siteName: "Skull Multimarcas",
-    images: [{ url: "/images/logo-skull-nova-4k.png", width: 1254, height: 1254, alt: "Skull Multimarcas" }],
+    images: [{ url: `${normalizedSiteUrl}images/logo-skull-nova-4k.png`, width: 1254, height: 1254, alt: "Skull Multimarcas" }],
     locale: "pt_BR",
     type: "website",
   },
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: assetPath("/favicon.svg") },
 };
 
 export const viewport: Viewport = {
