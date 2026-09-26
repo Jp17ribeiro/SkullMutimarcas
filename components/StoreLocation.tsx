@@ -24,7 +24,7 @@ export function StoreLocation() {
           <div className="route-line" aria-hidden="true"><span>Cidade Ocidental</span><i /><b /><i /><span>Skull</span></div>
         </Reveal>
         <Reveal className="location-card location-photo-card" delay={0.15}>
-          <Image src={assetPath("/images/foto-loja-skull.png")} alt="Interior da loja Skull Multimarcas em Cidade Ocidental" fill sizes="(max-width: 820px) 100vw, 58vw" />
+          <Image src={assetPath("/images/foto-loja-skull.webp")} alt="Interior da loja Skull Multimarcas em Cidade Ocidental" fill sizes="(max-width: 820px) 100vw, 58vw" />
           <div className="location-photo-shade" />
           <div className="store-badge">
             <MapPin />

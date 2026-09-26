@@ -8,7 +8,7 @@ export function Manifesto() {
   return (
     <section className="manifesto manifesto-cinematic section" id="sobre">
       <motion.div className="manifesto-media" initial={{ scale: 1.08 }} whileInView={{ scale: 1 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }} aria-hidden="true">
-        <Image src={assetPath("/images/foto-vitrine-skull.png")} alt="" fill sizes="100vw" />
+        <Image src={assetPath("/images/foto-vitrine-skull.webp")} alt="" fill sizes="100vw" />
       </motion.div>
       <div className="manifesto-shade" aria-hidden="true" />
       <div className="container manifesto-inner">

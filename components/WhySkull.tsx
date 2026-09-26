@@ -13,10 +13,10 @@ type WhyItem = {
 };
 
 const items: WhyItem[] = [
-  { n: "01", title: "Marcas selecionadas", text: "Streetwear escolhido para quem procura estilo e personalidade.", image: assetPath("/images/juncao-marcas-skull.png") },
-  { n: "02", title: "Estilo autêntico", text: "Peças que acompanham a cultura urbana e as tendências das ruas.", icon: Sparkles, image: assetPath("/images/foto-vitrine-skull.png"), imagePosition: "center 42%" },
+  { n: "01", title: "Marcas selecionadas", text: "Streetwear escolhido para quem procura estilo e personalidade.", image: assetPath("/images/juncao-marcas-skull.webp") },
+  { n: "02", title: "Estilo autêntico", text: "Peças que acompanham a cultura urbana e as tendências das ruas.", icon: Sparkles, image: assetPath("/images/foto-vitrine-skull.webp"), imagePosition: "center 42%" },
   { n: "03", title: "Atendimento direto", text: "Fale com nossa equipe rapidamente pelo WhatsApp.", icon: MessageCircle },
-  { n: "04", title: "Loja física", text: "Experimente, conheça as peças e encontre seu próximo estilo.", icon: MapPin, image: assetPath("/images/foto-loja-skull.png"), imagePosition: "center 58%" },
+  { n: "04", title: "Loja física", text: "Experimente, conheça as peças e encontre seu próximo estilo.", icon: MapPin, image: assetPath("/images/foto-loja-skull.webp"), imagePosition: "center 58%" },
 ];
 
 export function WhySkull() {

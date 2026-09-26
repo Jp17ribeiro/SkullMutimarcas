@@ -5,11 +5,11 @@ import { whatsappUrl } from "@/lib/contact";
 import { Reveal } from "./Reveal";
 
 const categories = [
-  { title: "Tênis", code: "01", blurb: "Explore Hocks", image: assetPath("/images/foto-loja-skull.png"), position: "center 72%", className: "collection-featured" },
-  { title: "Camisetas", code: "02", blurb: "Novos drops", image: assetPath("/images/foto-vitrine-skull.png"), position: "center 34%", className: "collection-tall" },
-  { title: "Conjuntos", code: "03", blurb: "Monte seu visual", image: assetPath("/images/foto-vitrine-skull.png"), position: "center 72%", className: "" },
-  { title: "Acessórios", code: "04", blurb: "Complete o corre", image: assetPath("/images/foto-loja-skull.png"), position: "center 62%", className: "" },
-  { title: "Lançamentos", code: "05", blurb: "Veja as novidades", image: assetPath("/images/juncao-marcas-skull.png"), position: "center", className: "" },
+  { title: "Tênis", code: "01", blurb: "Explore Hocks", image: assetPath("/images/foto-loja-skull.webp"), position: "center 72%", className: "collection-featured" },
+  { title: "Camisetas", code: "02", blurb: "Novos drops", image: assetPath("/images/foto-vitrine-skull.webp"), position: "center 34%", className: "collection-tall" },
+  { title: "Conjuntos", code: "03", blurb: "Monte seu visual", image: assetPath("/images/foto-vitrine-skull.webp"), position: "center 72%", className: "" },
+  { title: "Acessórios", code: "04", blurb: "Complete o corre", image: assetPath("/images/foto-loja-skull.webp"), position: "center 62%", className: "" },
+  { title: "Lançamentos", code: "05", blurb: "Veja as novidades", image: assetPath("/images/juncao-marcas-skull.webp"), position: "center", className: "" },
 ];
 
 export function Collections() {

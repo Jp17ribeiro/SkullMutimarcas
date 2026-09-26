@@ -8,11 +8,11 @@ import { whatsappUrl } from "@/lib/contact";
 import { Reveal } from "./Reveal";
 
 const products = [
-  { brand: "Hocks", name: "Seleção Hocks", image: assetPath("/images/foto-loja-skull.png"), position: "center 68%" },
-  { brand: "Trip Side", name: "Camiseta Trip Side", image: assetPath("/images/foto-vitrine-skull.png"), position: "center 36%" },
-  { brand: "Chronic", name: "Drop Chronic", image: assetPath("/images/foto-loja-skull.png"), position: "35% 72%" },
-  { brand: "Compton", name: "Linha Compton", image: assetPath("/images/juncao-marcas-skull.png"), position: "center" },
-  { brand: "Cool Cat", name: "Seleção Cool Cat", image: assetPath("/images/foto-vitrine-skull.png"), position: "center 67%" },
+  { brand: "Hocks", name: "Seleção Hocks", image: assetPath("/images/foto-loja-skull.webp"), position: "center 68%" },
+  { brand: "Trip Side", name: "Camiseta Trip Side", image: assetPath("/images/foto-vitrine-skull.webp"), position: "center 36%" },
+  { brand: "Chronic", name: "Drop Chronic", image: assetPath("/images/foto-loja-skull.webp"), position: "35% 72%" },
+  { brand: "Compton", name: "Linha Compton", image: assetPath("/images/juncao-marcas-skull.webp"), position: "center" },
+  { brand: "Cool Cat", name: "Seleção Cool Cat", image: assetPath("/images/foto-vitrine-skull.webp"), position: "center 67%" },
 ];
 
 export function ProductHighlights() {
@@ -47,8 +47,8 @@ export function ProductHighlights() {
           <p>Peças escolhidas pra quem não segue tendência.<br />Cria a própria.</p>
           <div className="products-controls">
             <span><b>{String(active).padStart(2, "0")}</b> / {String(products.length).padStart(2, "0")}</span>
-            <button onClick={() => move(-1)} aria-label="Produto anterior"><ArrowLeft /></button>
-            <button onClick={() => move(1)} aria-label="Próximo produto"><ArrowRight /></button>
+            <button type="button" onClick={() => move(-1)} aria-label="Produto anterior"><ArrowLeft /></button>
+            <button type="button" onClick={() => move(1)} aria-label="Próximo produto"><ArrowRight /></button>
           </div>
         </Reveal>
       </div>

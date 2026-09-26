@@ -17,7 +17,7 @@ export function Hero() {
   return (
     <section className="hero" id="inicio" ref={ref}>
       <motion.div className="hero-bg" style={{ y }} aria-hidden="true">
-        <Image src={assetPath("/images/grafite-skull.png")} alt="Grafite Skull em cenário urbano" fill priority sizes="100vw" quality={90} />
+        <Image src={assetPath("/images/grafite-skull.webp")} alt="Grafite Skull em cenário urbano" fill priority sizes="100vw" />
       </motion.div>
       <div className="hero-shade" />
       <div className="hero-grain" />
